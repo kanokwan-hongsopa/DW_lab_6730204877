@@ -133,3 +133,6 @@ In the staging layer, we have the following tables:
 ### **Datawarehouse Layer**
 <img src="./readme_images/logical-model.png">
 
+- dim_customers: load data from stg_customer, rename id to customer_id, deduplicate records by customer_id using row_number(), and insert insertion timestamp.
+
+- dim_employees: load data from stg_employees, rename id to employee_id, deduplicate records by employee_id using row_number(), and insert insertion timestamp.
